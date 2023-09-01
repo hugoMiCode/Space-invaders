@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Space invaders:  Fichier source de Ship.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Space invaders<span id="projectnumber">&#160;0.0</span>
+   </div>
+   <div id="projectbrief">Space shooting</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_ship_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Ship.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_ship_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;SFML/Graphics.hpp&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;SFML/Audio.hpp&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_entity_8h.html">Entity.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;deque&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="struct_fire_struct.html">    7</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_fire_struct.html">FireStruct</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="struct_fire_struct.html#acdfce68a31078973f30f0704b52af0b5">    9</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_fire_struct.html#acdfce68a31078973f30f0704b52af0b5">posFireX</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="struct_fire_struct.html#a0e8edd4cabbfd969d95cd29e1ed42a73">   10</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_fire_struct.html#a0e8edd4cabbfd969d95cd29e1ed42a73">posFireY</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="struct_fire_struct.html#a35d57ea2f4744291579328c3bdb32e20">   11</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_fire_struct.html#a35d57ea2f4744291579328c3bdb32e20">fireDegats</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="struct_fire_struct.html#a9d2056f60fa376bd2183eeb6be1a01e7">   12</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_fire_struct.html#a9d2056f60fa376bd2183eeb6be1a01e7">speed</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">    sf::Sprite* sprite_bullet;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">    sf::Vector2f sizeRenderBullet;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>};</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_ship.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="class_ship.html">Ship</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_entity.html">Entity</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_class" href="class_ship.html">Ship</a>(<a class="code hl_struct" href="struct_infos_ship.html">InfosShip</a> infosShip);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_ship.html#adc6a4b80ad5e15053031b90cca25342c">   23</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_ship.html#adc6a4b80ad5e15053031b90cca25342c">~Ship</a>() {}</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_ship.html#ae58b4f2773431bb1c654a0f7cddeedaa">   25</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_ship.html#ae58b4f2773431bb1c654a0f7cddeedaa">fire</a>() = 0;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ship.html#a1c38eb06580e6ccb5e6ab1ad300aee8c">canFire</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_ship.html#a6bc267975da74def76e14e436bc157de">update</a>(sf::RenderWindow* window);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_ship.html#ab40537310057b8c05eae320190cca55c">show</a>(sf::RenderWindow* window);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_ship.html#a0edc51be58abfd7b6b240e80c8fad46d">collisions</a>(sf::RenderWindow* window);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ship.html#aa4c8a05e575b32f70d99220de9c864a1">isDead</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_ship.html#a75a43b1281ac5eb21c434c8932f77cd4">hit</a>(<span class="keywordtype">float</span> degats);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_ship.html#a6a62943e9af317c7b5469cba5c8cce5d">getMaxHealth</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_ship.html#a7f4e2b2e93c8f792d81955d54bb1c4d3">getHealth</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_ship.html#aafbe8d74d2d54263b8282558bcf6b623">getShield</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_ship.html#a15fb86fda8b5c3dd2717f2a8e71086df">getMaxShield</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_ship.html#a19194004cbe09e343c5793675638cf90">getScore</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_ship.html#a863e83d3f25cd2433417e1add826822c">getAmmunition</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_ship.html#a82caa9d0d945fb19b7f58aba5b20c4cb">getAmmunitionMax</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_ship.html#a2fc317f0d86277aff8718c5aa69000c6">getCurrentFireMode</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_ship.html#a5cec0357c10fe79618f1d34d5ee76ee2">getMaxFireMode</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_ship.html#a4c050c37743a6e27cc2916ca1edfe9e0">getDepView</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_ship.html#a3a5def11fad0b4683eb211261b507f8c">addScore</a>(<span class="keywordtype">int</span> scoreAdd);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_ship.html#a6190a1cba2922a217e54856ccb956df7">addShield</a>(<span class="keywordtype">float</span> shieldAdd);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_ship.html#a4d2f886db0a85b218608df8bdf1e60f5">addHealth</a>(<span class="keywordtype">float</span> healthAdd);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_ship.html#ac9c8cdbb3994b6ebfcbf4e0022d38b0a">addAmmu</a>(<span class="keywordtype">float</span> ammuAdd);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_ship.html#aa4de9e92772af7cf5c1118fb0cd7c413">addFireMode</a>(<span class="keywordtype">int</span> newFireMode = 0);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_ship.html#ad0bc92cdbae95e5981e482b29901ba8b">setFrequency</a>(<span class="keywordtype">float</span> newFrequency);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_ship.html#adcbdea15b72f8b524ddbf22b6dfa37b1">setAmmunitinmax</a>(<span class="keywordtype">int</span> newAmmunitinmax);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_ship.html#a597d354790adfdaf4ebc21ccff825aaf">   54</a></span>    sf::Sprite* <a class="code hl_variable" href="class_ship.html#a597d354790adfdaf4ebc21ccff825aaf">spriteShip</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">//sf::Sprite* spriteBullet;</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">//sf::Vector2f sizeRenderBullet;</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_ship.html#aa7cdd03763b6f1b720187b0df1fcafe4">   57</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_ship.html#aa7cdd03763b6f1b720187b0df1fcafe4">maxFireMode</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_ship.html#a851a97b801a0a95edcb90ed7ce15fd4e">   58</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_ship.html#a851a97b801a0a95edcb90ed7ce15fd4e">fireMode</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_ship.html#a0a2a0534307205b6d9a2f6f6a429eadc">   59</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_ship.html#a0a2a0534307205b6d9a2f6f6a429eadc">ammunition</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_ship.html#a3d10bc337dd747d6d1b87b9528dac9c0">   60</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_ship.html#a3d10bc337dd747d6d1b87b9528dac9c0">ammunitionMax</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_ship.html#a5fc1def84680a6498bb5a9dd23255bba">   61</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_ship.html#a5fc1def84680a6498bb5a9dd23255bba">frequencyFire</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_ship.html#a54ee1395429f2baebf5521a78a7a9d46">   62</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_ship.html#a54ee1395429f2baebf5521a78a7a9d46">frequencyReload</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_ship.html#a7936eb21dba1ffefd4e22eaca91067d4">   63</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_ship.html#a7936eb21dba1ffefd4e22eaca91067d4">score</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_ship.html#a57e9bbc4056723a005f14c97fae6d195">   64</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_ship.html#a57e9bbc4056723a005f14c97fae6d195">speedFire</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_ship.html#a1d4b22961b598918575c98ae630225c9">   65</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_ship.html#a1d4b22961b598918575c98ae630225c9">shield</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_ship.html#ac6565ff7c53ada5313f1f1bedd1a641c">   66</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_ship.html#ac6565ff7c53ada5313f1f1bedd1a641c">shieldMax</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_ship.html#a2989ac1f29a85fbb227b512525d6f111">   67</a></span>    sf::Clock <a class="code hl_variable" href="class_ship.html#a2989ac1f29a85fbb227b512525d6f111">clockCanFire</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_ship.html#a8f734df9f5f623f1189ee70cd2aa5629">   68</a></span>    sf::Clock <a class="code hl_variable" href="class_ship.html#a8f734df9f5f623f1189ee70cd2aa5629">clockCanReload</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_ship.html#a5afd22e5712a08b27cf7b32b19963e5c">   69</a></span>    sf::Clock <a class="code hl_variable" href="class_ship.html#a5afd22e5712a08b27cf7b32b19963e5c">clockHealth</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_ship.html#a27013c296179be206a457979069c5b5f">   70</a></span>    sf::Clock <a class="code hl_variable" href="class_ship.html#a27013c296179be206a457979069c5b5f">clockMove</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_ship.html#ad4ae5207d757bfe6aea2c736409619ab">   71</a></span>    sf::Sound* <a class="code hl_variable" href="class_ship.html#ad4ae5207d757bfe6aea2c736409619ab">soundFire</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_ship.html#ae0558eb3e7bdfe766779e92f24080d33">   72</a></span>    sf::Sound* <a class="code hl_variable" href="class_ship.html#ae0558eb3e7bdfe766779e92f24080d33">soundHit</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_ship.html#a6a2a68bdfd2748b86dc922136b6701d7">   73</a></span>    <a class="code hl_struct" href="struct_fire_struct.html">FireStruct</a> <a class="code hl_variable" href="class_ship.html#a6a2a68bdfd2748b86dc922136b6701d7">fireStruct</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_ship.html#aee7395ebbd9d5a5f80e3c8fba6194bbd">   74</a></span>    <a class="code hl_struct" href="struct_fire_struct.html">FireStruct</a> <a class="code hl_variable" href="class_ship.html#aee7395ebbd9d5a5f80e3c8fba6194bbd">fireStruct5</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_ship.html#ad29e61e32ba48ee67bbb158111b28e37">   75</a></span>    <a class="code hl_struct" href="struct_fire_struct.html">FireStruct</a> <a class="code hl_variable" href="class_ship.html#ad29e61e32ba48ee67bbb158111b28e37">fireStruct_5</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_ship.html#a9edcb14b5e7afd483e27ce838c9c7a84">   76</a></span>    <a class="code hl_struct" href="struct_fire_struct.html">FireStruct</a> <a class="code hl_variable" href="class_ship.html#a9edcb14b5e7afd483e27ce838c9c7a84">fireStruct10</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_ship.html#a3b488b3c8d510ed95224e27916efc11f">   77</a></span>    <a class="code hl_struct" href="struct_fire_struct.html">FireStruct</a> <a class="code hl_variable" href="class_ship.html#a3b488b3c8d510ed95224e27916efc11f">fireStruct_10</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_ship.html#a8ab63183372b768574ae77fd873a162b">   79</a></span>    <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_ship.html#a8ab63183372b768574ae77fd873a162b">depViewX</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>};</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_purple_ship.html">   82</a></span><span class="keyword">class </span><a class="code hl_class" href="class_purple_ship.html">PurpleShip</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_ship.html">Ship</a></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>{</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_class" href="class_purple_ship.html">PurpleShip</a>(<a class="code hl_struct" href="struct_infos_ship.html">InfosShip</a> infosShip);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_purple_ship.html#a428b5895d4ca6eaa9836b4145832464c">fire</a>();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_purple_ship.html#a9e67edff0def367be5979b7a9f73d1fe">initHitBox</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_red_ship.html">   91</a></span><span class="keyword">class </span><a class="code hl_class" href="class_red_ship.html">RedShip</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_ship.html">Ship</a></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>{</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_class" href="class_red_ship.html">RedShip</a>(<a class="code hl_struct" href="struct_infos_ship.html">InfosShip</a> infosShip);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_red_ship.html#a7e920c7b738c7943cdd1b1d0e4b0c513">fire</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_red_ship.html#a906adb1843c1616a2d11528407e21290">initHitBox</a>();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>};</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_orange_ship.html">  100</a></span><span class="keyword">class </span><a class="code hl_class" href="class_orange_ship.html">OrangeShip</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_ship.html">Ship</a></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>{</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_class" href="class_orange_ship.html">OrangeShip</a>(<a class="code hl_struct" href="struct_infos_ship.html">InfosShip</a> infosShip);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_orange_ship.html#aacb96b9376b707614b455eea9237cc04">fire</a>();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_orange_ship.html#abfe2f7c7577ac48a33b0f54919d17c6a">initHitBox</a>();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>};</div>
+<div class="ttc" id="a_entity_8h_html"><div class="ttname"><a href="_entity_8h.html">Entity.h</a></div></div>
+<div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> Entity.h:21</div></div>
+<div class="ttc" id="aclass_orange_ship_html"><div class="ttname"><a href="class_orange_ship.html">OrangeShip</a></div><div class="ttdef"><b>Definition:</b> Ship.h:101</div></div>
+<div class="ttc" id="aclass_orange_ship_html_aacb96b9376b707614b455eea9237cc04"><div class="ttname"><a href="class_orange_ship.html#aacb96b9376b707614b455eea9237cc04">OrangeShip::fire</a></div><div class="ttdeci">void fire()</div><div class="ttdef"><b>Definition:</b> Ship.cpp:584</div></div>
+<div class="ttc" id="aclass_orange_ship_html_abfe2f7c7577ac48a33b0f54919d17c6a"><div class="ttname"><a href="class_orange_ship.html#abfe2f7c7577ac48a33b0f54919d17c6a">OrangeShip::initHitBox</a></div><div class="ttdeci">void initHitBox()</div><div class="ttdef"><b>Definition:</b> Ship.cpp:389</div></div>
+<div class="ttc" id="aclass_purple_ship_html"><div class="ttname"><a href="class_purple_ship.html">PurpleShip</a></div><div class="ttdef"><b>Definition:</b> Ship.h:83</div></div>
+<div class="ttc" id="aclass_purple_ship_html_a428b5895d4ca6eaa9836b4145832464c"><div class="ttname"><a href="class_purple_ship.html#a428b5895d4ca6eaa9836b4145832464c">PurpleShip::fire</a></div><div class="ttdeci">void fire()</div><div class="ttdef"><b>Definition:</b> Ship.cpp:493</div></div>
+<div class="ttc" id="aclass_purple_ship_html_a9e67edff0def367be5979b7a9f73d1fe"><div class="ttname"><a href="class_purple_ship.html#a9e67edff0def367be5979b7a9f73d1fe">PurpleShip::initHitBox</a></div><div class="ttdeci">void initHitBox()</div><div class="ttdef"><b>Definition:</b> Ship.cpp:320</div></div>
+<div class="ttc" id="aclass_red_ship_html"><div class="ttname"><a href="class_red_ship.html">RedShip</a></div><div class="ttdef"><b>Definition:</b> Ship.h:92</div></div>
+<div class="ttc" id="aclass_red_ship_html_a7e920c7b738c7943cdd1b1d0e4b0c513"><div class="ttname"><a href="class_red_ship.html#a7e920c7b738c7943cdd1b1d0e4b0c513">RedShip::fire</a></div><div class="ttdeci">void fire()</div><div class="ttdef"><b>Definition:</b> Ship.cpp:412</div></div>
+<div class="ttc" id="aclass_red_ship_html_a906adb1843c1616a2d11528407e21290"><div class="ttname"><a href="class_red_ship.html#a906adb1843c1616a2d11528407e21290">RedShip::initHitBox</a></div><div class="ttdeci">void initHitBox()</div><div class="ttdef"><b>Definition:</b> Ship.cpp:357</div></div>
+<div class="ttc" id="aclass_ship_html"><div class="ttname"><a href="class_ship.html">Ship</a></div><div class="ttdef"><b>Definition:</b> Ship.h:20</div></div>
+<div class="ttc" id="aclass_ship_html_a0a2a0534307205b6d9a2f6f6a429eadc"><div class="ttname"><a href="class_ship.html#a0a2a0534307205b6d9a2f6f6a429eadc">Ship::ammunition</a></div><div class="ttdeci">int ammunition</div><div class="ttdef"><b>Definition:</b> Ship.h:59</div></div>
+<div class="ttc" id="aclass_ship_html_a0edc51be58abfd7b6b240e80c8fad46d"><div class="ttname"><a href="class_ship.html#a0edc51be58abfd7b6b240e80c8fad46d">Ship::collisions</a></div><div class="ttdeci">void collisions(sf::RenderWindow *window)</div><div class="ttdef"><b>Definition:</b> Ship.cpp:144</div></div>
+<div class="ttc" id="aclass_ship_html_a15fb86fda8b5c3dd2717f2a8e71086df"><div class="ttname"><a href="class_ship.html#a15fb86fda8b5c3dd2717f2a8e71086df">Ship::getMaxShield</a></div><div class="ttdeci">float getMaxShield()</div><div class="ttdef"><b>Definition:</b> Ship.cpp:191</div></div>
+<div class="ttc" id="aclass_ship_html_a19194004cbe09e343c5793675638cf90"><div class="ttname"><a href="class_ship.html#a19194004cbe09e343c5793675638cf90">Ship::getScore</a></div><div class="ttdeci">int getScore()</div><div class="ttdef"><b>Definition:</b> Ship.cpp:240</div></div>
+<div class="ttc" id="aclass_ship_html_a1c38eb06580e6ccb5e6ab1ad300aee8c"><div class="ttname"><a href="class_ship.html#a1c38eb06580e6ccb5e6ab1ad300aee8c">Ship::canFire</a></div><div class="ttdeci">bool canFire()</div><div class="ttdef"><b>Definition:</b> Ship.cpp:45</div></div>
+<div class="ttc" id="aclass_ship_html_a1d4b22961b598918575c98ae630225c9"><div class="ttname"><a href="class_ship.html#a1d4b22961b598918575c98ae630225c9">Ship::shield</a></div><div class="ttdeci">float shield</div><div class="ttdef"><b>Definition:</b> Ship.h:65</div></div>
+<div class="ttc" id="aclass_ship_html_a27013c296179be206a457979069c5b5f"><div class="ttname"><a href="class_ship.html#a27013c296179be206a457979069c5b5f">Ship::clockMove</a></div><div class="ttdeci">sf::Clock clockMove</div><div class="ttdef"><b>Definition:</b> Ship.h:70</div></div>
+<div class="ttc" id="aclass_ship_html_a2989ac1f29a85fbb227b512525d6f111"><div class="ttname"><a href="class_ship.html#a2989ac1f29a85fbb227b512525d6f111">Ship::clockCanFire</a></div><div class="ttdeci">sf::Clock clockCanFire</div><div class="ttdef"><b>Definition:</b> Ship.h:67</div></div>
+<div class="ttc" id="aclass_ship_html_a2fc317f0d86277aff8718c5aa69000c6"><div class="ttname"><a href="class_ship.html#a2fc317f0d86277aff8718c5aa69000c6">Ship::getCurrentFireMode</a></div><div class="ttdeci">int getCurrentFireMode()</div><div class="ttdef"><b>Definition:</b> Ship.cpp:255</div></div>
+<div class="ttc" id="aclass_ship_html_a3a5def11fad0b4683eb211261b507f8c"><div class="ttname"><a href="class_ship.html#a3a5def11fad0b4683eb211261b507f8c">Ship::addScore</a></div><div class="ttdeci">void addScore(int scoreAdd)</div><div class="ttdef"><b>Definition:</b> Ship.cpp:196</div></div>
+<div class="ttc" id="aclass_ship_html_a3b488b3c8d510ed95224e27916efc11f"><div class="ttname"><a href="class_ship.html#a3b488b3c8d510ed95224e27916efc11f">Ship::fireStruct_10</a></div><div class="ttdeci">FireStruct fireStruct_10</div><div class="ttdef"><b>Definition:</b> Ship.h:77</div></div>
+<div class="ttc" id="aclass_ship_html_a3d10bc337dd747d6d1b87b9528dac9c0"><div class="ttname"><a href="class_ship.html#a3d10bc337dd747d6d1b87b9528dac9c0">Ship::ammunitionMax</a></div><div class="ttdeci">int ammunitionMax</div><div class="ttdef"><b>Definition:</b> Ship.h:60</div></div>
+<div class="ttc" id="aclass_ship_html_a4c050c37743a6e27cc2916ca1edfe9e0"><div class="ttname"><a href="class_ship.html#a4c050c37743a6e27cc2916ca1edfe9e0">Ship::getDepView</a></div><div class="ttdeci">static float getDepView()</div><div class="ttdef"><b>Definition:</b> Ship.cpp:265</div></div>
+<div class="ttc" id="aclass_ship_html_a4d2f886db0a85b218608df8bdf1e60f5"><div class="ttname"><a href="class_ship.html#a4d2f886db0a85b218608df8bdf1e60f5">Ship::addHealth</a></div><div class="ttdeci">void addHealth(float healthAdd)</div><div class="ttdef"><b>Definition:</b> Ship.cpp:211</div></div>
+<div class="ttc" id="aclass_ship_html_a54ee1395429f2baebf5521a78a7a9d46"><div class="ttname"><a href="class_ship.html#a54ee1395429f2baebf5521a78a7a9d46">Ship::frequencyReload</a></div><div class="ttdeci">float frequencyReload</div><div class="ttdef"><b>Definition:</b> Ship.h:62</div></div>
+<div class="ttc" id="aclass_ship_html_a57e9bbc4056723a005f14c97fae6d195"><div class="ttname"><a href="class_ship.html#a57e9bbc4056723a005f14c97fae6d195">Ship::speedFire</a></div><div class="ttdeci">float speedFire</div><div class="ttdef"><b>Definition:</b> Ship.h:64</div></div>
+<div class="ttc" id="aclass_ship_html_a597d354790adfdaf4ebc21ccff825aaf"><div class="ttname"><a href="class_ship.html#a597d354790adfdaf4ebc21ccff825aaf">Ship::spriteShip</a></div><div class="ttdeci">sf::Sprite * spriteShip</div><div class="ttdef"><b>Definition:</b> Ship.h:54</div></div>
+<div class="ttc" id="aclass_ship_html_a5afd22e5712a08b27cf7b32b19963e5c"><div class="ttname"><a href="class_ship.html#a5afd22e5712a08b27cf7b32b19963e5c">Ship::clockHealth</a></div><div class="ttdeci">sf::Clock clockHealth</div><div class="ttdef"><b>Definition:</b> Ship.h:69</div></div>
+<div class="ttc" id="aclass_ship_html_a5cec0357c10fe79618f1d34d5ee76ee2"><div class="ttname"><a href="class_ship.html#a5cec0357c10fe79618f1d34d5ee76ee2">Ship::getMaxFireMode</a></div><div class="ttdeci">int getMaxFireMode()</div><div class="ttdef"><b>Definition:</b> Ship.cpp:260</div></div>
+<div class="ttc" id="aclass_ship_html_a5fc1def84680a6498bb5a9dd23255bba"><div class="ttname"><a href="class_ship.html#a5fc1def84680a6498bb5a9dd23255bba">Ship::frequencyFire</a></div><div class="ttdeci">float frequencyFire</div><div class="ttdef"><b>Definition:</b> Ship.h:61</div></div>
+<div class="ttc" id="aclass_ship_html_a6190a1cba2922a217e54856ccb956df7"><div class="ttname"><a href="class_ship.html#a6190a1cba2922a217e54856ccb956df7">Ship::addShield</a></div><div class="ttdeci">void addShield(float shieldAdd)</div><div class="ttdef"><b>Definition:</b> Ship.cpp:203</div></div>
+<div class="ttc" id="aclass_ship_html_a6a2a68bdfd2748b86dc922136b6701d7"><div class="ttname"><a href="class_ship.html#a6a2a68bdfd2748b86dc922136b6701d7">Ship::fireStruct</a></div><div class="ttdeci">FireStruct fireStruct</div><div class="ttdef"><b>Definition:</b> Ship.h:73</div></div>
+<div class="ttc" id="aclass_ship_html_a6a62943e9af317c7b5469cba5c8cce5d"><div class="ttname"><a href="class_ship.html#a6a62943e9af317c7b5469cba5c8cce5d">Ship::getMaxHealth</a></div><div class="ttdeci">float getMaxHealth()</div><div class="ttdef"><b>Definition:</b> Ship.cpp:176</div></div>
+<div class="ttc" id="aclass_ship_html_a6bc267975da74def76e14e436bc157de"><div class="ttname"><a href="class_ship.html#a6bc267975da74def76e14e436bc157de">Ship::update</a></div><div class="ttdeci">void update(sf::RenderWindow *window)</div><div class="ttdef"><b>Definition:</b> Ship.cpp:79</div></div>
+<div class="ttc" id="aclass_ship_html_a75a43b1281ac5eb21c434c8932f77cd4"><div class="ttname"><a href="class_ship.html#a75a43b1281ac5eb21c434c8932f77cd4">Ship::hit</a></div><div class="ttdeci">void hit(float degats)</div><div class="ttdef"><b>Definition:</b> Ship.cpp:156</div></div>
+<div class="ttc" id="aclass_ship_html_a7936eb21dba1ffefd4e22eaca91067d4"><div class="ttname"><a href="class_ship.html#a7936eb21dba1ffefd4e22eaca91067d4">Ship::score</a></div><div class="ttdeci">int score</div><div class="ttdef"><b>Definition:</b> Ship.h:63</div></div>
+<div class="ttc" id="aclass_ship_html_a7f4e2b2e93c8f792d81955d54bb1c4d3"><div class="ttname"><a href="class_ship.html#a7f4e2b2e93c8f792d81955d54bb1c4d3">Ship::getHealth</a></div><div class="ttdeci">float getHealth()</div><div class="ttdef"><b>Definition:</b> Ship.cpp:181</div></div>
+<div class="ttc" id="aclass_ship_html_a82caa9d0d945fb19b7f58aba5b20c4cb"><div class="ttname"><a href="class_ship.html#a82caa9d0d945fb19b7f58aba5b20c4cb">Ship::getAmmunitionMax</a></div><div class="ttdeci">int getAmmunitionMax()</div><div class="ttdef"><b>Definition:</b> Ship.cpp:250</div></div>
+<div class="ttc" id="aclass_ship_html_a851a97b801a0a95edcb90ed7ce15fd4e"><div class="ttname"><a href="class_ship.html#a851a97b801a0a95edcb90ed7ce15fd4e">Ship::fireMode</a></div><div class="ttdeci">int fireMode</div><div class="ttdef"><b>Definition:</b> Ship.h:58</div></div>
+<div class="ttc" id="aclass_ship_html_a863e83d3f25cd2433417e1add826822c"><div class="ttname"><a href="class_ship.html#a863e83d3f25cd2433417e1add826822c">Ship::getAmmunition</a></div><div class="ttdeci">int getAmmunition()</div><div class="ttdef"><b>Definition:</b> Ship.cpp:245</div></div>
+<div class="ttc" id="aclass_ship_html_a8ab63183372b768574ae77fd873a162b"><div class="ttname"><a href="class_ship.html#a8ab63183372b768574ae77fd873a162b">Ship::depViewX</a></div><div class="ttdeci">static float depViewX</div><div class="ttdef"><b>Definition:</b> Ship.h:79</div></div>
+<div class="ttc" id="aclass_ship_html_a8f734df9f5f623f1189ee70cd2aa5629"><div class="ttname"><a href="class_ship.html#a8f734df9f5f623f1189ee70cd2aa5629">Ship::clockCanReload</a></div><div class="ttdeci">sf::Clock clockCanReload</div><div class="ttdef"><b>Definition:</b> Ship.h:68</div></div>
+<div class="ttc" id="aclass_ship_html_a9edcb14b5e7afd483e27ce838c9c7a84"><div class="ttname"><a href="class_ship.html#a9edcb14b5e7afd483e27ce838c9c7a84">Ship::fireStruct10</a></div><div class="ttdeci">FireStruct fireStruct10</div><div class="ttdef"><b>Definition:</b> Ship.h:76</div></div>
+<div class="ttc" id="aclass_ship_html_aa4c8a05e575b32f70d99220de9c864a1"><div class="ttname"><a href="class_ship.html#aa4c8a05e575b32f70d99220de9c864a1">Ship::isDead</a></div><div class="ttdeci">bool isDead()</div><div class="ttdef"><b>Definition:</b> Ship.cpp:74</div></div>
+<div class="ttc" id="aclass_ship_html_aa4de9e92772af7cf5c1118fb0cd7c413"><div class="ttname"><a href="class_ship.html#aa4de9e92772af7cf5c1118fb0cd7c413">Ship::addFireMode</a></div><div class="ttdeci">void addFireMode(int newFireMode=0)</div><div class="ttdef"><b>Definition:</b> Ship.cpp:227</div></div>
+<div class="ttc" id="aclass_ship_html_aa7cdd03763b6f1b720187b0df1fcafe4"><div class="ttname"><a href="class_ship.html#aa7cdd03763b6f1b720187b0df1fcafe4">Ship::maxFireMode</a></div><div class="ttdeci">int maxFireMode</div><div class="ttdef"><b>Definition:</b> Ship.h:57</div></div>
+<div class="ttc" id="aclass_ship_html_aafbe8d74d2d54263b8282558bcf6b623"><div class="ttname"><a href="class_ship.html#aafbe8d74d2d54263b8282558bcf6b623">Ship::getShield</a></div><div class="ttdeci">float getShield()</div><div class="ttdef"><b>Definition:</b> Ship.cpp:186</div></div>
+<div class="ttc" id="aclass_ship_html_ab40537310057b8c05eae320190cca55c"><div class="ttname"><a href="class_ship.html#ab40537310057b8c05eae320190cca55c">Ship::show</a></div><div class="ttdeci">virtual void show(sf::RenderWindow *window)</div><div class="ttdef"><b>Definition:</b> Ship.cpp:138</div></div>
+<div class="ttc" id="aclass_ship_html_ac6565ff7c53ada5313f1f1bedd1a641c"><div class="ttname"><a href="class_ship.html#ac6565ff7c53ada5313f1f1bedd1a641c">Ship::shieldMax</a></div><div class="ttdeci">float shieldMax</div><div class="ttdef"><b>Definition:</b> Ship.h:66</div></div>
+<div class="ttc" id="aclass_ship_html_ac9c8cdbb3994b6ebfcbf4e0022d38b0a"><div class="ttname"><a href="class_ship.html#ac9c8cdbb3994b6ebfcbf4e0022d38b0a">Ship::addAmmu</a></div><div class="ttdeci">void addAmmu(float ammuAdd)</div><div class="ttdef"><b>Definition:</b> Ship.cpp:219</div></div>
+<div class="ttc" id="aclass_ship_html_ad0bc92cdbae95e5981e482b29901ba8b"><div class="ttname"><a href="class_ship.html#ad0bc92cdbae95e5981e482b29901ba8b">Ship::setFrequency</a></div><div class="ttdeci">void setFrequency(float newFrequency)</div><div class="ttdef"><b>Definition:</b> Ship.cpp:270</div></div>
+<div class="ttc" id="aclass_ship_html_ad29e61e32ba48ee67bbb158111b28e37"><div class="ttname"><a href="class_ship.html#ad29e61e32ba48ee67bbb158111b28e37">Ship::fireStruct_5</a></div><div class="ttdeci">FireStruct fireStruct_5</div><div class="ttdef"><b>Definition:</b> Ship.h:75</div></div>
+<div class="ttc" id="aclass_ship_html_ad4ae5207d757bfe6aea2c736409619ab"><div class="ttname"><a href="class_ship.html#ad4ae5207d757bfe6aea2c736409619ab">Ship::soundFire</a></div><div class="ttdeci">sf::Sound * soundFire</div><div class="ttdef"><b>Definition:</b> Ship.h:71</div></div>
+<div class="ttc" id="aclass_ship_html_adc6a4b80ad5e15053031b90cca25342c"><div class="ttname"><a href="class_ship.html#adc6a4b80ad5e15053031b90cca25342c">Ship::~Ship</a></div><div class="ttdeci">virtual ~Ship()</div><div class="ttdef"><b>Definition:</b> Ship.h:23</div></div>
+<div class="ttc" id="aclass_ship_html_adcbdea15b72f8b524ddbf22b6dfa37b1"><div class="ttname"><a href="class_ship.html#adcbdea15b72f8b524ddbf22b6dfa37b1">Ship::setAmmunitinmax</a></div><div class="ttdeci">void setAmmunitinmax(int newAmmunitinmax)</div><div class="ttdef"><b>Definition:</b> Ship.cpp:275</div></div>
+<div class="ttc" id="aclass_ship_html_ae0558eb3e7bdfe766779e92f24080d33"><div class="ttname"><a href="class_ship.html#ae0558eb3e7bdfe766779e92f24080d33">Ship::soundHit</a></div><div class="ttdeci">sf::Sound * soundHit</div><div class="ttdef"><b>Definition:</b> Ship.h:72</div></div>
+<div class="ttc" id="aclass_ship_html_ae58b4f2773431bb1c654a0f7cddeedaa"><div class="ttname"><a href="class_ship.html#ae58b4f2773431bb1c654a0f7cddeedaa">Ship::fire</a></div><div class="ttdeci">virtual void fire()=0</div></div>
+<div class="ttc" id="aclass_ship_html_aee7395ebbd9d5a5f80e3c8fba6194bbd"><div class="ttname"><a href="class_ship.html#aee7395ebbd9d5a5f80e3c8fba6194bbd">Ship::fireStruct5</a></div><div class="ttdeci">FireStruct fireStruct5</div><div class="ttdef"><b>Definition:</b> Ship.h:74</div></div>
+<div class="ttc" id="astruct_fire_struct_html"><div class="ttname"><a href="struct_fire_struct.html">FireStruct</a></div><div class="ttdef"><b>Definition:</b> Ship.h:8</div></div>
+<div class="ttc" id="astruct_fire_struct_html_a0e8edd4cabbfd969d95cd29e1ed42a73"><div class="ttname"><a href="struct_fire_struct.html#a0e8edd4cabbfd969d95cd29e1ed42a73">FireStruct::posFireY</a></div><div class="ttdeci">float posFireY</div><div class="ttdef"><b>Definition:</b> Ship.h:10</div></div>
+<div class="ttc" id="astruct_fire_struct_html_a35d57ea2f4744291579328c3bdb32e20"><div class="ttname"><a href="struct_fire_struct.html#a35d57ea2f4744291579328c3bdb32e20">FireStruct::fireDegats</a></div><div class="ttdeci">int fireDegats</div><div class="ttdef"><b>Definition:</b> Ship.h:11</div></div>
+<div class="ttc" id="astruct_fire_struct_html_a9d2056f60fa376bd2183eeb6be1a01e7"><div class="ttname"><a href="struct_fire_struct.html#a9d2056f60fa376bd2183eeb6be1a01e7">FireStruct::speed</a></div><div class="ttdeci">float speed</div><div class="ttdef"><b>Definition:</b> Ship.h:12</div></div>
+<div class="ttc" id="astruct_fire_struct_html_acdfce68a31078973f30f0704b52af0b5"><div class="ttname"><a href="struct_fire_struct.html#acdfce68a31078973f30f0704b52af0b5">FireStruct::posFireX</a></div><div class="ttdeci">float posFireX</div><div class="ttdef"><b>Definition:</b> Ship.h:9</div></div>
+<div class="ttc" id="astruct_infos_ship_html"><div class="ttname"><a href="struct_infos_ship.html">InfosShip</a></div><div class="ttdef"><b>Definition:</b> Entity.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="_ship_8h.html">Ship.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+  </ul>
+</div>
+</body>
+</html>
